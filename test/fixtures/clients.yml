@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  age: 1
+  parent_name: MyString
+  parent_address: MyString
+  parent_phone_number: 1
+  insurance: false
+
+two:
+  name: MyString
+  age: 1
+  parent_name: MyString
+  parent_address: MyString
+  parent_phone_number: 1
+  insurance: false

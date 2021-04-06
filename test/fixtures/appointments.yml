@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2021-03-29 07:17:29
+  duration: 2021-03-29 07:17:29
+  client_id: 1
+  employee_id: 1
+
+two:
+  start_time: 2021-03-29 07:17:29
+  duration: 2021-03-29 07:17:29
+  client_id: 1
+  employee_id: 1
