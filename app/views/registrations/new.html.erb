@@ -1,3 +1,12 @@
 <h1> Register <h1>
 
-<%= form_with model: @employee %>
+<%= form_with model: @employee do |form|%>
+    <%= form.text_field :name %>
+    <%= form.text_field :title %>
+    <%= form.text_field :bacbid %>
+    <%= form.text_field :email %>
+    <%= form.text_field :password %>
+    <%= form.text_field :password_confirmation %>
+<% end %>
+
+
