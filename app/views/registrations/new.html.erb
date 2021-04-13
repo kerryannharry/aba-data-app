@@ -2,22 +2,22 @@
 
 <%= form_with model: @employee, url: new_registration_path do |form|%>
     <div class="mb-3">
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class="form-label" %>
     </div>
     <div class="mb-3">
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class="form-label" %>
     </div>
     <div class="mb-3">
-    <%= form.text_field :bacbid %>
+    <%= form.text_field :bacbid, class="form-label" %>
     </div>
     <div class="mb-3">
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class="form-label" %>
     </div>
     <div class="mb-3">
-    <%= form.password_field :password %>
+    <%= form.password_field :password, class="form-label" %>
     </div>
     <div class="mb-3">
-    <%= form.password_field :password_confirmation %>
+    <%= form.password_field :password_confirmation, class="form-label" %>
     </div>
 <% end %>
 
