@@ -1,12 +1,24 @@
 <h1> Register <h1>
 
-<%= form_with model: @employee do |form|%>
+<%= form_with model: @employee, url: new_registration_path do |form|%>
+    <div class="mb-3">
     <%= form.text_field :name %>
+    </div>
+    <div class="mb-3">
     <%= form.text_field :title %>
+    </div>
+    <div class="mb-3">
     <%= form.text_field :bacbid %>
+    </div>
+    <div class="mb-3">
     <%= form.text_field :email %>
-    <%= form.text_field :password %>
-    <%= form.text_field :password_confirmation %>
+    </div>
+    <div class="mb-3">
+    <%= form.password_field :password %>
+    </div>
+    <div class="mb-3">
+    <%= form.password_field :password_confirmation %>
+    </div>
 <% end %>
 
 
