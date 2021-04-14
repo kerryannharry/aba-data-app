@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :employees, except: [:new, :create]
   resources :clients, except: [:new, :create]
+  resources :appointments
+  resources :notes, except: [:index]
 
 end
