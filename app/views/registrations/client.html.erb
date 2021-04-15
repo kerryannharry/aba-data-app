@@ -2,35 +2,35 @@
 
 <%= form_with(model: @client, url: new_registration_path) do |form|%>
     <div class="mb-3">
-    <%= form.label :name %>
+    <%= form.label :name, "Client First and Last name:" %>
     <%= form.text_field :name, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :parent_name %>
+    <%= form.label :parent_name, "Primary Parent First and Last Name:" %>
     <%= form.text_field :parent_name, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :insurance %>
+    <%= form.label :insurance, "Insurance Eligibility:" %>
     <%= form.text_field :insurance, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :address %>
+    <%= form.label :address, "Current Address:" %>
     <%= form.text_field :address, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, class: "form-control" %>
+    <%= form.label :phone_number, "Primary Parent Phone Number:" %>
+    <%= form.telephone_field :phone_number, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control" %>
+    <%= form.label :email, "Primary Parent Email: " %>
+    <%= form.email_field :email, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :password %>
+    <%= form.label :password, "Password:" %>
     <%= form.password_field :password, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :password_confirmation %>
+    <%= form.label :password_confirmation, "Confirm Password:" %>
     <%= form.password_field :password_confirmation, class: "form-control" %>
     </div>
     <div class="mb-3">
