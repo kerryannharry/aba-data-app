@@ -10,8 +10,8 @@
     <%= form.text_field :parent_name, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :insurance, "Insurance Eligibility:" %>
-    <%= form.text_field :insurance, class: "form-control" %>
+    <%= form.label :insurance, "This client is eligible for insurance coverage." %>
+    <%= form.check_box :insurance, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :address, "Current Address:" %>
