@@ -3,35 +3,35 @@
 <%= form_with(model: @client, url: new_registration_path) do |form|%>
     <div class="mb-3">
     <%= form.label :name %>
-    <%= form.text_field :name, class:"form-control" %>
+    <%= form.text_field :name, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :parent_name %>
-    <%= form.text_field :parent_name, class:"form-control" %>
+    <%= form.text_field :parent_name, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :insurance %>
-    <%= form.text_field :insurance, class:"form-control" %>
+    <%= form.text_field :insurance, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :address %>
-    <%= form.text_field :address, class:"form-control" %>
+    <%= form.text_field :address, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, class:"form-control" %>
+    <%= form.text_field :phone_number, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :email %>
-    <%= form.text_field :email, class:"form-control" %>
+    <%= form.text_field :email, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :password %>
-    <%= form.password_field :password, class:"form-control" %>
+    <%= form.password_field :password, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation, class:"form-control" %>
+    <%= form.password_field :password_confirmation, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.submit "Register", class: "btn btn-primary" %>
