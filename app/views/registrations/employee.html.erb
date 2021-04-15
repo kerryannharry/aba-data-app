@@ -2,25 +2,31 @@
 
 <%= form_with model: @employee, url: new_registration_path do |form|%>
     <div class="mb-3">
-    <%= form.text_field :name, class="form-control" %>
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.text_field :title, class="form-contro;" %>
+    <%= form.label :title %>
+    <%= form.text_field :title, class:"form-contro;" %>
     </div>
     <div class="mb-3">
-    <%= form.text_field :bacbid, class="form-control" %>
+    <%= form.label :bacbid %>
+    <%= form.number_field :bacbid, class:"form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.text_field :email, class="form-control" %>
+    <%= form.label :email %>
+    <%= form.text_field :email, class:"form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.password_field :password, class="form-control" %>
+    <%= form.label :password %>
+    <%= form.password_field :password, class:"form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.password_field :password_confirmation, class="form-control" %>
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, class:"form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.submit "Register", class= btn btn-primary"
+    <%= form.submit "Register", class: "btn btn-primary" %>
     </div>
 <% end %>
 
