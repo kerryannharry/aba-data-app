@@ -1,6 +1,14 @@
 class SessionsController < ApplicationController
    def new
-    user = User.create(email: params[:email])
+    user = User.create(params)
+    if user.valid?
+        flash[:success] = "Registration sucessfully completed!"
+        session[:user_id] = user.id
+        # redirect_to home
+    else
+        flash[:error]=user.errors.full_messages.to_sentence
+        render :new
+      end
    end
 
    def create
