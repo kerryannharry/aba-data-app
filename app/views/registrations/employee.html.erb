@@ -1,17 +1,22 @@
 <h1> Employee Registration <h1>
+ <% if @employee.errors.any? %>
+    <% @employee.errors.full_messages.each do |message| %>
+        <%= message %>
+    <% end %>
+ <% end %>
 
-<%= form_with model: @employee, url: new_registration_path do |form|%>
+<%= form_with model: @employee, url: registrations_path do |form|%>
     <div class="mb-3">
     <%= form.label :name, "Employee First and Last Name:" %>
     <%= form.text_field :name, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :title, "Title:" %>
-    <%= form.text_field :title, class: "form-control" %>
+    <%= form.label :role, "Title:" %>
+    <%= form.text_field :role, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :bacbid, "BACB ID:" %>
-    <%= form.number_field :bacbid, class: "form-control" %>
+    <%= form.text_field :bacbid, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :email, "Employee Email:" %>
