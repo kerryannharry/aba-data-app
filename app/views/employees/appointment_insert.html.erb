@@ -9,6 +9,10 @@
     <%= form.text_field :client_id, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :duration, "Appointment Duration:" %>
-    <%= form.text_field :name, class: "form-control" %>
+    <%= form.label :duration, "Session Duration:" %>
+    <%= form.numeric_field :duration, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :start_time, "Session Start Time:" %>
+    <%= form.datetime_field :start_time, class: "form-control" %>
     </div>
