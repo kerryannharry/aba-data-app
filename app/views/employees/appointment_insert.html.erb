@@ -1,0 +1,14 @@
+<h1> New Appointment <h1>
+<%= form_with(model: @appointment, url: new_appointment_path) do |form|%>
+    <div class="mb-3">
+    <%= form.label :name, "Employee First and Last name:" %>
+    <%= form.text_field :employee_id, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :name, "Client First and Last name:" %>
+    <%= form.text_field :client_id, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :duration, "Appointment Duration:" %>
+    <%= form.text_field :name, class: "form-control" %>
+    </div>
