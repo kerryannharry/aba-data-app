@@ -6,7 +6,7 @@
  <% end %>
 
 <%= form_with model: @employee, url: registrations_path do |form|%>
-    <div class="mb-3">
+    <div class="mb-3 bg-red-500">
     <%= form.label :name, "Employee First and Last Name:" %>
     <%= form.text_field :name, class: "form-control" %>
     </div>
