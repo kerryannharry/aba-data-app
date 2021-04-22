@@ -1,8 +1,12 @@
-<h1> <%=@current_user.name%> </h1>
+<h5> <%=@current_user.name%> </h5>
 <br>
+    <h3><%= client.parent_name%></h3>
+    <h3><%= client.parent_address%></h3>
+    <h3><%= client.parent_phone_number%></h3>
 <h4> Appointments! </h4>
 <%= @clients.appointments.each do |appointment| %>
     <li>
-    <h3><%= appointment.%>
+    <h3><%= appointment.start_time%>
     </li>
+    <h5><%= @clients.employees.each %></h5>
     <% end %>
