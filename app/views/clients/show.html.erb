@@ -1,0 +1,8 @@
+<h1> <%=@current_user.name%> </h1>
+<br>
+<h4> Appointments! </h4>
+<%= @clients.appointments.each do |appointment| %>
+    <li>
+    <h3><%= appointment.%>
+    </li>
+    <% end %>
