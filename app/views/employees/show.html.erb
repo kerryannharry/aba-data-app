@@ -1,16 +1,19 @@
-<h5> <%=@current_user.name%> </h5>
+<h1><%= current_user.name%> </h1>
 <br>
-    <h3><%= employee.role%></h3>
-    <h3><%= employee.bacbid%></h3>
-    <h3><%= employee.email%></h3>
-    <h3><%= employee.bacbid%></h3>
+    <h3><%= current_user.role%></h3>
+    <h3><%= current_user.email%></h3>
+    <h3><%= current_user.bacbid%></h3>
     <br>
-<h4> Appointments! </h4>
-<%= @employees.appointments.each do |appointment| %>
+<h3>Appointments! </h3>
+<% current_user.appointments.each do |appointment| %>
     <li>
     <h3><%= appointment.start_time%>
     </li>
     <br>
-    <h5> <%=@current_user.name Clients!%> </h5>
-    <h3><%= @employees.clients.each do |client| %></h3>
+<% end %>
+<h3>Clients: </h3>
+<% current_user.clients.each do |client| %>
+    <li>
+    <h3><%= client.name%></h3>
+    </li>
 <% end %>

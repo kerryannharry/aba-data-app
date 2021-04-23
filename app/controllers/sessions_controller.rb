@@ -1,26 +1,18 @@
 class SessionsController < ApplicationController
    def new
-    user = User.create(params)
-    if user.valid?
-        flash[:success] = "Registration sucessfully completed!"
-        session[:user_id] = user.id
-        # redirect_to home
-    else
-        flash[:error]=user.errors.full_messages.to_sentence
-        render :new
-      end
    end
 
-   def create
-    user = User.find_by(email: params[:email])
+def create
+    user = Client.find_by(parent_email: params[:email]) ||  Employee.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        byebug
-        # redirect_to home, notice: "Logged in successfully!"
+        session[:type] = user.class.to_s
+        redirect_to user, notice: "Logged in successfully!"
     else
         flash[:error] = "Invalid email or password."
         render :new
-   end 
+   end
+end 
 
    def destroy
     session[:user_id] = nil

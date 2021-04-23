@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
 
   resources :notes, except: [:index]
-
+get"/login", to: "sessions#new"
 end
