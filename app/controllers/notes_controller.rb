@@ -5,5 +5,12 @@ class NotesController < ApplicationController
     end 
 
     def create
+        @note = Note.create(new_note_params)
+    end
+
+
+
+    private
+    def new_note_params
     end
 end
