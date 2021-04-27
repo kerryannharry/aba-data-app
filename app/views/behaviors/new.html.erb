@@ -10,6 +10,10 @@
     <%= form.integer_field :frequency, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :name, "Behavior duration:" %>
+    <%= form.label :name, "Behavior Duration:" %>
     <%= form.time_field :duration, class: "form-control" %>
     </div>
+    <div class="mb-3">
+    <%= form.submit "Create Behavior", class: "btn btn-primary" %>
+    </div>
+<% end %>
