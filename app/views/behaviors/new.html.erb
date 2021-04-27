@@ -1,0 +1,8 @@
+<h1> Behavior: </h1>
+
+<%= form_with(model: @behavior, url: new_behavior_path) do |form|%>
+    <div class="mb-3">
+    <%= form.label :name, "Behavior Name:" %>
+    <%= form.text_field :name, class: "form-control" %>
+    </div>
+    
