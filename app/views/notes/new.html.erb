@@ -10,8 +10,16 @@
     <%= form.text_field :name, class: "form-control" %>
     </div>
     <div class="mb-3">
-    <%= form.label :date, "Employee Name:" %>
+    <%= form.label :date, "Service Date:" %>
     <%= form.text_field :date, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :time, "Service length:" %>
+    <%= form.time_field :time, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :name, "Employee Name:" %>
+    <%= form.text_field :name, class: "form-control" %>
     </div>
 
     <% end %>
