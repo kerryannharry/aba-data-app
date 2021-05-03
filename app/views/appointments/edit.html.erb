@@ -1,4 +1,6 @@
+<h4>Edit Appointment:</h4>
 <%= form_with(model: @appointment, url: appointments_path) do |form|%>
 <input id="hidden" type="hidden" name="_method" value="patch">
     <p>Title: <input type="text" name="title" value="<%=@group.title%>" required></p>
     <input type="submit" value="Update">
+<% end %>
