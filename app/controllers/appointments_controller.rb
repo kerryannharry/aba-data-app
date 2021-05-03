@@ -13,6 +13,12 @@ class AppointmentsController < ApplicationController
         render :new
    end
    def edit
+    @appointment = Appointment.find_by(id: params[:id])
+    if current_user.appointments.find_by(id: params[:id])
+        render :edit
+    else
+        redirect_to current_user
+    end
    end
 
    def destory
@@ -20,7 +26,7 @@ class AppointmentsController < ApplicationController
     if @appointment.destory
         head(:completed)
     else
-        head(:error)
+        redirect_to current_user
    end 
 end
 
