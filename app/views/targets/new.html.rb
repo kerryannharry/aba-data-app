@@ -41,8 +41,18 @@
     <%= form.label :partial_physical_prompt, "Partial Physical Prompt" %>
     <%= form.check_box :partial_physical_prompt, class: "form-control" %>
     </div>
-
     <div class="mb-3">
+    <%= form.label :gesture_prompt, "Gesture Prompt" %>
+    <%= form.check_box :gesture_prompt, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :visual_prompt, "Visual Prompt" %>
+    <%= form.check_box :visual_prompt, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :modeling_prompt, "Modeling Prompt" %>
+    <%= form.check_box :modeling_prompt, class: "form-control" %>
+    </div>
     <%= form.label :trials, "Trails Ran:" %>
     <%= form.number_field :trials, class: "form-control" %>
     </div>
