@@ -3,6 +3,8 @@
     <h3><%= current_user.role%></h3>
     <h3><%= current_user.email%></h3>
     <h3><%= current_user.bacbid%></h3>
+    <h3><%= f.label :main_image %></h3>
+    <h3><%= f.file_field :main_image %></h3>
     <br>
 <h3>Appointments! </h3>
 <% current_user.appointments.each do |appointment| %>
