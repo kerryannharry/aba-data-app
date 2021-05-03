@@ -13,7 +13,5 @@
 <% end %>
 <h3>Clients: </h3>
 <% current_user.clients.each do |client| %>
-    <li>
-    <h3><%= client.name%></h3>
-    </li>
+    <h3><%= link_to client.name, client%></h3>
 <% end %>

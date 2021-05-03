@@ -2,12 +2,8 @@
 
 <%= form_with(model: @note, url: new_note_path) do |form|%>
     <div class="mb-3">
-    <%= form.label :name, "Client Name:" %>
-    <%= form.text_field :name, class: "form-control" %>
-    </div>
-    <div class="mb-3">
-    <%= form.label :name, "Employee Name:" %>
-    <%= form.text_field :name, class: "form-control" %>
+    <%= form.label :client_id, "Client First and Last name:" %>
+    <%= form.collection_select :client_id, Client.all, :id, :name, prompt:"Select One", class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :date, "Service Date:" %>
@@ -17,9 +13,5 @@
     <%= form.label :time, "Service length:" %>
     <%= form.time_field :time, class: "form-control" %>
     </div>
-    <div class="mb-3">
-    <%= form.label :name, "Employee Name:" %>
-    <%= form.text_field :name, class: "form-control" %>
-    </div>
 
-    <% end %>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_23_011410) do
+ActiveRecord::Schema.define(version: 2021_04_27_124350) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "start_time"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2021_04_23_011410) do
     t.integer "client_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "target_explanation"
+    t.string "function_of_behavior"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -42,6 +44,8 @@ ActiveRecord::Schema.define(version: 2021_04_23_011410) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "parent_email"
+    t.binary "client_picture"
+    t.date "client_dob"
   end
 
   create_table "employees", force: :cascade do |t|
@@ -53,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_04_23_011410) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "bacbid"
+    t.binary "employee_picture"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -60,6 +65,9 @@ ActiveRecord::Schema.define(version: 2021_04_23_011410) do
     t.integer "employee_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.time "duration"
+    t.text "note_explanation"
+    t.date "session_date"
   end
 
 end
