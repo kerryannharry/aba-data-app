@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_124350) do
+ActiveRecord::Schema.define(version: 2021_05_03_014522) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "start_time"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_04_27_124350) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "target_explanation"
     t.string "function_of_behavior"
+    t.string "function"
   end
 
   create_table "clients", force: :cascade do |t|
@@ -68,6 +69,17 @@ ActiveRecord::Schema.define(version: 2021_04_27_124350) do
     t.time "duration"
     t.text "note_explanation"
     t.date "session_date"
+  end
+
+  create_table "targets", force: :cascade do |t|
+    t.string "title"
+    t.text "descripition"
+    t.string "score_correct"
+    t.string "score_incorrect"
+    t.integer "trial"
+    t.text "protocols"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
