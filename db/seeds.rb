@@ -15,3 +15,6 @@ Employee.create(name:"KerryAnn Harry", email:"kerryann.harry@pineconetherapies.c
 Employee.create(name:"Casey Hill", email:"casey.hill@pineconetherapies.com", role:"RBT", bacbid:"RBT-66-7782", password: "TEST")
 Employee.create(name:"Nancy Dallas", email:"nancy.dallas@pineconetherapies.com", role:"RBT", bacbid:"RBT-99-7782", password: "TEST")
 Employee.create(name:"Brandon Parker", email:"brandon.parker@pineconetherapies.com", role:"BCBA", bacbid:"BCBA-44-8952", password: "TEST")
+Target.create(title:"What is your name?, descripition:"Ask the clients their name and they should respond by saying their name. Ex: whats your name.. Jill!)
+Target.create(title:"", descripition:"")
+
