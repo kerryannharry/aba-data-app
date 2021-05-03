@@ -3,6 +3,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
         render :new
    end
+
    def create
     @appointment = Appointment.new(appointment_params)
     @appointment.employee = current_user 
@@ -11,6 +12,16 @@ class AppointmentsController < ApplicationController
     else 
         render :new
    end
+   def edit
+   end
+
+   def destory
+    @appointment = Appointment.where(id: params[:id]).first
+    if @appointment.destory
+        head(:completed)
+    else
+        head(:error)
+   end 
 end
 
 
