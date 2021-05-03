@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_03_014522) do
+ActiveRecord::Schema.define(version: 2021_05_03_033619) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "start_time"
@@ -74,12 +74,21 @@ ActiveRecord::Schema.define(version: 2021_05_03_014522) do
   create_table "targets", force: :cascade do |t|
     t.string "title"
     t.text "descripition"
-    t.string "score_correct"
-    t.string "score_incorrect"
+    t.boolean "score_correct"
+    t.boolean "score_incorrect"
     t.integer "trial"
     t.text "protocols"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "verbal_prompt"
+    t.boolean "partial_verbal_prompt"
+    t.boolean "full_physical_prompt"
+    t.boolean "partial_physical_prompt"
+    t.boolean "gesture_prompt"
+    t.boolean "visual_prompt"
+    t.boolean "modeling_prompt"
+    t.integer "client_id"
+    t.integer "behavior_id"
   end
 
 end
