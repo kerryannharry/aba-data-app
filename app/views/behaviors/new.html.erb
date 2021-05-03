@@ -3,7 +3,7 @@
 <%= form_with(model: @behavior, url: new_behavior_path) do |form|%>
     <div class="mb-3">
     <%= form.label :name, "Behavior Name:" %>
-    <%= form.text_field :name, class: "form-control" %>
+    <<%= form.collection_select :behavior_id, Behavior.all, :id, :name, prompt:"Select One", class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :name, "Behavior Frequency:" %>

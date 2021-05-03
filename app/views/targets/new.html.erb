@@ -7,7 +7,7 @@
     </div>
     <div class="mb-3">
     <%= form.label :title, "Taret Title:" %>
-    <%= form.text_field :Target, class: "form-control" %>
+    <%= form.collection_select :target_id, Target.all, :id, :title, prompt:"Select One", class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.label :description, "Description:" %>
