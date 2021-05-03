@@ -29,5 +29,13 @@ Target.create(title:"Recalling Events.")
 Target.create(title:"Greetings")
 Target.create(title:"Attending to song")
 Target.create(title:"Responding to name")
+Behavior.create(name:"Spitting")
+Behavior.create(name:"Physical aggression")
+Behavior.create(name:"Non-compliance")
+Behavior.create(name:"Biting")
+Behavior.create(name:"Object aggression")
+Behavior.create(name:"Perseveration")
+Behavior.create(name:"Screaming")
+Behavior.create(name:"Tantrum")
 
 
