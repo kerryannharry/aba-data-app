@@ -48,6 +48,17 @@
     <div class="mb-3">
     <%= form.label :name, "Behavior Duration:" %>
     <%= form.time_field :duration, class: "form-control" %>
+    </div> <div class="mb-3">
+    <%= form.label :name, "Behavior Name:" %>
+    <%= form.text_field :name, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :name, "Behavior Frequency:" %>
+    <%= form.integer_field :frequency, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :name, "Behavior Duration:" %>
+    <%= form.time_field :duration, class: "form-control" %>
     </div>
     <div class="mb-3">
     <%= form.submit "Create Behavior", class: "btn btn-primary" %>
