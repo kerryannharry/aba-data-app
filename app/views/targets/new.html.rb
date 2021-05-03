@@ -25,7 +25,23 @@
     <%= form.label :score_incorrect, "Incorrect" %>
     <%= form.check_box :score_incorrect, class: "form-control" %>
     </div>
-    
+    <div class="mb-3">
+    <%= form.label :verbal_prompt, "Verbal Prompt" %>
+    <%= form.check_box :verbal_prompt, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :partial_verbal_prompt, "Partial Verbal Prompt" %>
+    <%= form.check_box :partial_verbal_prompt, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :full_physical_prompt, "Full Physical Prompt" %>
+    <%= form.check_box :full_physical_prompt, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :partial_physical_prompt, "Partial Physical Prompt" %>
+    <%= form.check_box :partial_physical_prompt, class: "form-control" %>
+    </div>
+
     <div class="mb-3">
     <%= form.label :trials, "Trails Ran:" %>
     <%= form.number_field :trials, class: "form-control" %>
