@@ -1,9 +1,23 @@
 <h4>Edit Appointment:</h4>
-<%= form_with(model: @appointment, url: appointments_path) do |form|%>
-    
-<%=<p>Title: <input type="text" name="title" value="<%=@group.title%>" required></p><p>Title: <input type="text" name="title" value="<%=@group.title%>" required></p>%>
-
-<div class="mb-3">
-<%= form.submit "update", class: "btn btn-primary" %>
-</div>
+<% if @appointment.errors.any? %>
+    <% @appointment.errors.full_messages.each do |error| %>
+        <%= error %>
+    <% end %>
+<% end %>
+<%= form_with(model: @appointment, url: appointment_path) do |form|%>
+    <div class="mb-3">
+    <%= form.label :client_id, "Client First and Last name:" %>
+    <%= form.collection_select :client_id, Client.all, :id, :name, prompt:"Select One", class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :duration, "Session Duration:" %>
+    <%= form.number_field :duration, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.label :start_time, "Session Start Time:" %>
+    <%= form.datetime_field :start_time, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+    <%= form.submit "Edit appointment!", class: "btn btn-primary" %>
+    </div>
 <% end %>

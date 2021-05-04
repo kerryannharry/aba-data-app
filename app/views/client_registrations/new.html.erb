@@ -2,8 +2,8 @@
 
 <%= form_with(model: @client, url: new_registration_path) do |form|%>
     <div class="mb-3">
-    <%= f.label :main_image %>
-    <%= f.file_field :main_image %>
+    <%= form.label :main_image %>
+    <%= form.file_field :main_image %>
     </div>
     <div class="mb-3 bg-red">
     <%= form.label :name, "Client First and Last name:" %>

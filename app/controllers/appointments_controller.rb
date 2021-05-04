@@ -12,13 +12,28 @@ class AppointmentsController < ApplicationController
     else 
         render :new
    end
+end
+
    def edit
     @appointment = Appointment.find_by(id: params[:id])
-    if current_user.appointments.find_by(id: params[:id])
+    if current_user.appointments.include?(@appointment)
         render :edit
     else
         redirect_to current_user
     end
+   end
+
+   def update
+    @appointment = Appointment.find_by(id: params[:id])
+    # if !current_user.appointments.include?(@appointment)
+    #     redirect_to current_user
+    # else 
+       if @appointment.update(appointment_params)
+        redirect_to current_user
+       else 
+        render :edit
+       end
+    # end
    end
 
    def destory
