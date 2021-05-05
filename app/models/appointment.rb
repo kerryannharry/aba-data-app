@@ -5,11 +5,11 @@ class Appointment < ApplicationRecord
 
     validates :start_time, :duration, :client_id, :employee_id, presence:true
 
-    scope :scheduled, -> { where(STATUS[:scheduled]) }
-    scope :draft, -> { where(STATUS[:draft]) }
-    STATUS = {
-        scheduled: "Scheduled",
-        draft: "Draft"
-    }
+    scope :scheduled, -> { where staus: "Scheduled" }
+    scope :draft, -> { where staus: "Draft" }
+    # STATUS = {
+    #     scheduled: "Scheduled",
+    #     draft: "Draft"
+    # }
 
 end
