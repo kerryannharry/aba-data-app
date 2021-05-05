@@ -1,4 +1,4 @@
-<h1><%= current_user.name%> </h1>
+<h1><%= current_user.name%></h1>
 <br>
    
     <h3><%= current_user.role%></h3>
@@ -8,7 +8,7 @@
 <h3>Appointments! </h3>
 <% current_user.appointments.each do |appointment| %>
     <li>
-    <h3><%= appointment.start_time%>
+    <h3><%= link_to appointment.start_time%>
     </li>
     <br>
 <% end %>

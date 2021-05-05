@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   resources :notes, except: [:index]
 get"/login", to: "sessions#new"
+# get"/login", to: "sessions#new"
 end

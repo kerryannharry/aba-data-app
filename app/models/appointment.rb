@@ -5,8 +5,8 @@ class Appointment < ApplicationRecord
 
     validates :start_time, :duration, :client_id, :employee_id, presence:true
 
-    scope :scheduled, -> { where staus: "Scheduled" }
-    scope :draft, -> { where staus: "Draft" }
+    scope :scheduled, -> { where status: "Scheduled" }
+    scope :draft, -> { where status: "Draft" }
     # STATUS = {
     #     scheduled: "Scheduled",
     #     draft: "Draft"

@@ -37,5 +37,5 @@ Behavior.create(name:"object aggression")
 Behavior.create(name:"perseveration")
 Behavior.create(name:"screaming")
 Behavior.create(name:"tantrum")
-Apointment.create()
+
 

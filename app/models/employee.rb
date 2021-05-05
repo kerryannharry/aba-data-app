@@ -11,5 +11,5 @@ class Employee < ApplicationRecord
    
 
     has_secure_password
-    validates :password, length: {in: 8..50}, confirmation: true, on: :create
+    # validates :password, length: {in: 8..50}, confirmation: true, on: :create
 end

@@ -15,6 +15,6 @@
 <h3>Therapists: </h3>
 <% current_user.employees.each do |employee| %>
     <li>
-    <h3><%= employee.name%></h3>
+    <h3><%= link_to employee.name%></h3>
     </li>
 <% end %>
