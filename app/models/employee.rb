@@ -4,7 +4,7 @@ class Employee < ApplicationRecord
     has_many :clients, through: :appointments
     has_one_attached :main_image
 
-    validates :name, :email, :role, : presence:true
+    validates :name, :email, :role, :bacbid, presence:true
  
 
    

@@ -3,5 +3,5 @@ class Note < ApplicationRecord
     belongs_to :employee
 
 
-    validates :name, :email, :role, : presence:true
+    validates :appointment_id, :employee_id, :duration, :note_explanation, :session_date, presence:true
 end
