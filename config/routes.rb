@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :behaviors, only: [:new, :create]
   resources :clients, except: [:new, :create]
-  resources :appointments
   resources :employees, except: [:new, :create] do 
     resources :appointments, shallow: true 
   end

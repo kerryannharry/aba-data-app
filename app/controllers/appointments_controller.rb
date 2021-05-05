@@ -14,6 +14,15 @@ class AppointmentsController < ApplicationController
    end
 end
 
+def index
+    if params[:employee_id] && @employee= Employee.find_by(id: params[:employee_id])
+        @appointments = @employee.appointments 
+    else 
+        @appointments = current_user.appointments
+        flash.now[:error]= "Employee not found. Here are your appointments!"
+    end
+end
+
    def edit
     @appointment = Appointment.find_by(id: params[:id])
     if current_user.appointments.include?(@appointment)
@@ -25,23 +34,23 @@ end
 
    def update
     @appointment = Appointment.find_by(id: params[:id])
-    # if !current_user.appointments.include?(@appointment)
-    #     redirect_to current_user
-    # else 
+    if !current_user.appointments.include?(@appointment)
+        redirect_to current_user
+    else 
        if @appointment.update(appointment_params)
         redirect_to current_user
        else 
         render :edit
        end
-    # end
+    end
    end
 
-   def destory
-    @appointment = Appointment.where(id: params[:id]).first
-    if @appointment.destory
-        head(:completed)
-    else
+   def destroy
+    @appointment = Appointment.find_by(id: params[:id])
+    if @appointment.destroy
         redirect_to current_user
+    else
+        render :edit
    end 
 end
 

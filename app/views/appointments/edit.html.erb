@@ -21,3 +21,7 @@
     <%= form.submit "Edit appointment!", class: "btn btn-primary" %>
     </div>
 <% end %>
+
+<div class="mb-3">
+    <%= button_to "Delete appointment!", appointment_path, method: :delete, class: "btn btn-primary" %>
+</div>
