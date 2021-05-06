@@ -1,4 +1,6 @@
+<div class="text-4xl">
 <h1> Employee Registration </h1>
+</div>
  <% if @employee.errors.any? %>
     <% @employee.errors.full_messages.each do |message| %>
         <%= message %>
@@ -6,35 +8,35 @@
  <% end %>
 
 <%= form_with model: @employee, url: registrations_path do |form|%>
-    <div class="mb-3">
+    <div class="text-lg">
     <%= form.label :main_image %>
     <%= form.file_field :main_image %>
     </div>
-    <div class="mb-3 bg-red-500">
+    <div class="text-lg">
     <%= form.label :name, "Employee First and Last Name:" %>
     <%= form.text_field :name, class: "form-control" %>
     </div>
-    <div class="mb-3">
+    <div class="text-lg">
     <%= form.label :role, "Title:" %>
     <%= form.text_field :role, class: "form-control" %>
     </div>
-    <div class="mb-3">
+    <div class="text-lg">
     <%= form.label :bacbid, "BACB ID:" %>
     <%= form.text_field :bacbid, class: "form-control" %>
     </div>
-    <div class="mb-3">
+    <div class="text-lg">
     <%= form.label :email, "Employee Email:" %>
     <%= form.email_field :email, class: "form-control" %>
     </div>
-    <div class="mb-3">
+    <div class="text-lg">
     <%= form.label :password, "Password:" %>
     <%= form.password_field :password, class: "form-control" %>
     </div>
-    <div class="mb-3">
+    <div class="text-lg">
     <%= form.label :password_confirmation, "Confirm password:" %>
     <%= form.password_field :password_confirmation, class: "form-control" %>
     </div>
-    <div class="mb-3">
+    <div class="text-lg">
     <%= form.submit "Welcome to the team!", class: "btn btn-primary" %>
     </div>
 <% end %>
