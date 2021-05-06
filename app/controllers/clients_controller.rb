@@ -8,8 +8,4 @@ class ClientsController < ApplicationController
     def redirect_if_not_owner
         redirect_to current_user unless current_user  == Client.find_by(id: params[:id]) || session[:type] == "Employee"
     end
-
-    # def redirect_if_not_employee
-    #     redirect_to current_user if session[:type] != "Employee" 
-    # end
 end

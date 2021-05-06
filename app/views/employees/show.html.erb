@@ -8,11 +8,11 @@
 <h3>Appointments! </h3>
 <% current_user.appointments.each do |appointment| %>
     <li>
-    <h3><%= link_to appointment.start_time%>
+    <h3><%= appointment.start_time%>
     </li>
     <br>
 <% end %>
 <h3>Clients: </h3>
 <% current_user.clients.each do |client| %>
-    <h3><%= link_to client.name, client%></h3>
+    <h3><%= client.name%></h3>
 <% end %>
