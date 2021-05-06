@@ -8,7 +8,8 @@ class RegistrationsController < ApplicationController
         @employee = Employee.create(sign_up_params)
         if @employee.id
             session[:user_id] = @employee.id
-            redirect_to show
+            session[:type] = "Employee"
+            redirect_to employee_path(@employee)
         else 
             
             render :employee

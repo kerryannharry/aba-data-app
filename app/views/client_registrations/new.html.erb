@@ -1,8 +1,12 @@
-<div class="text-4xl text-blue-800">
+<div class="text-4xl">
 <h1> Client Registration </h1>
 </div>
-
-<%= form_with(model: @client, url: new_registration_path) do |form|%>
+<% if @client.errors.any? %>
+    <% @client.errors.full_messages.each do |message| %>
+        <%= message %>
+    <% end %>
+ <% end %>
+<%= form_with(model: @client, url: client_registrations_path) do |form|%>
     <div class="text-lg font-serif">
     <%= form.label :main_image %>
     <%= form.file_field :main_image %>
@@ -21,15 +25,15 @@
     </div>
     <div class="text-lg font-serif">
     <%= form.label :address, "Current Address:" %>
-    <%= form.text_field :address, class: "form-control" %>
+    <%= form.text_field :parent_address, class: "form-control" %>
     </div>
     <div class="text-lg font-serif">
     <%= form.label :phone_number, "Primary Parent Phone Number:" %>
-    <%= form.telephone_field :phone_number, class: "form-control" %>
+    <%= form.telephone_field :parent_phone_number, class: "form-control" %>
     </div>
     <div class="text-lg font-serif">
     <%= form.label :email, "Primary Parent Email: " %>
-    <%= form.email_field :email, class: "form-control" %>
+    <%= form.email_field :parent_email, class: "form-control" %>
     </div>
     <div class="text-lg font-serif">
     <%= form.label :password, "Password:" %>
@@ -39,7 +43,7 @@
     <%= form.label :password_confirmation, "Confirm Password:" %>
     <%= form.password_field :password_confirmation, class: "form-control" %>
     </div>
-    <div class="text-lg font-serif flex justify-center">
+    <div class="text-lg font-serif">
     <%= form.submit "Register", class: "btn btn-primary" %>
     </div>
 <% end %>

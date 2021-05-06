@@ -16,6 +16,7 @@ end
 
    def destroy
     session[:user_id] = nil
-    redirect_to login, notice: "Logged out!"
+    session[:type] = nil
+    redirect_to login_path, notice: "Logged out!"
    end 
 end

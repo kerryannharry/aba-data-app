@@ -8,11 +8,11 @@
  <% end %>
 
 <%= form_with model: @employee, url: registrations_path do |form|%>
-    <div class="text-lg font-serif">
+    <div class="text-lg font-serif ">
     <%= form.label :main_image %>
     <%= form.file_field :main_image %>
     </div>
-    <div class="text-lg font-serif">
+    <div class="text-lg font-serif"> 
     <%= form.label :name, "Employee First and Last Name:" %>
     <%= form.text_field :name, class: "form-control" %>
     </div>
