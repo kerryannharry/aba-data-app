@@ -1,4 +1,4 @@
-<div class="text-4xl">
+<div class="text-4xl text-blue-800">
 <h1> Employee Registration </h1>
 </div>
  <% if @employee.errors.any? %>
@@ -36,7 +36,7 @@
     <%= form.label :password_confirmation, "Confirm password:" %>
     <%= form.password_field :password_confirmation, class: "form-control" %>
     </div>
-    <div class="text-lg font-serif">
+    <div class="text-lg font-serif flex justify-center">
     <%= form.submit "Welcome to the team!", class: "btn btn-primary" %>
     </div>
 <% end %>
