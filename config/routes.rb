@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see 
+  get '/auth/:provider/callback' => 'sessions#omniauth'
   resources :registrations, only: [:new, :create]
   resources :client_registrations, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]

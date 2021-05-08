@@ -19,4 +19,14 @@ end
     session[:type] = nil
     redirect_to login_path, notice: "Logged out!"
    end 
+
+   def omniauth
+    user = Employee.from_omniauth(request.env['omniauth.auth'])
+    if user.valid?
+        session[:user_id] =user.id
+        redirect_to user
+    else
+        redirect_to login_path
+    end
+   end
 end
