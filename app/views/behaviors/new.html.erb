@@ -1,5 +1,9 @@
 <h1> Behaviors Tracked: </h1>
-
+<% if @behavior.errors.any? %>
+    <% @behavior.errors.full_messages.each do |error| %>
+        <%= error %>
+    <% end %>
+<% end %>
 <%= form_with(model: @behavior, url: new_behavior_path) do |form|%>
     <div class="mb-3">
     <%= form.label :name, "Behavior Name:" %>

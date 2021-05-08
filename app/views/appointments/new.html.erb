@@ -1,4 +1,9 @@
 <h1> New Appointment <h1>
+<% if @appointment.errors.any? %>
+    <% @appointment.errors.full_messages.each do |error| %>
+        <%= error %>
+    <% end %>
+<% end %>
 <%= form_with(model: @appointment, ) do |form|%>
     <div class="mb-3">
     <%= form.label :client_id, "Client First and Last name:" %>
