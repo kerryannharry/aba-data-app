@@ -12,4 +12,12 @@ class Employee < ApplicationRecord
 
     has_secure_password
     # validates :password, length: {in: 8..50}, confirmation: true, on: :create
+
+    def self.from_omniauth(response)
+        Employee.find_or_create_by(uid: response[:uid], provider: response[:provider]) do |u|
+            u.email = response[:info][:email]
+            u.password = SecureRandom.hex(15)
+        end
+    end
+
 end
