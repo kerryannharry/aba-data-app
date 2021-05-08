@@ -1,4 +1,9 @@
 <h1> Login! </h1>
+<% if @session.errors.any? %>
+    <% @session.errors.full_messages.each do |error| %>
+        <%= error %>
+    <% end %>
+<% end %>
 
 <%= form_with url: sessions_path, method: :post do |form|%>
 
