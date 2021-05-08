@@ -1,4 +1,9 @@
 <h1> Target Data: </h1>
+<% if @target.errors.any? %>
+    <% @target.errors.full_messages.each do |error| %>
+        <%= error %>
+    <% end %>
+<% end %>
 
 <%= form_with url: targets_path, method: :post do |form|%>
     <div class="mb-3">
