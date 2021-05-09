@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :client_registrations, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
   resources :behaviors, only: [:new, :create]
+  resources :targets, only: [:new, :create]
   resources :clients, except: [:new, :create]
   resources :appointments, only: [:new, :create]
   resources :employees, except: [:new, :create] do 

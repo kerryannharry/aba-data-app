@@ -3,4 +3,7 @@ class TargetsController < ApplicationController
         @target = Target.new
         render :new
     end
+
+    def create
+    end
 end
