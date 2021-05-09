@@ -5,7 +5,7 @@ class AppointmentsController < ApplicationController
    end
 
    def create
-    @appointment = Appointment.new(appointment_params)
+    @appointment = Appointment.create(appointment_params)
     @appointment.employee = current_user 
     if @appointment.save
         redirect_to current_user
